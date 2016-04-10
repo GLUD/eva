@@ -179,7 +179,8 @@ Y lo lanzamos desde nuestro buscador localhost/drupal8
 ![DRUPAL](http://i63.tinypic.com/2vx21bn.png "drupal")  
 $$Figura \ 4: \ INSTALANDO DRUPAL \ $$  
 
-Iniciamos instalacion y aparece un mensaje de URL limpias, decido continuar instalacion pues desde el CMS puedo corregir ese detalle  
+Iniciamos instalacion y aparece un mensaje de URL limpias, el cual debe atenderse. Luego de solucionarle...
+
 Se crea una carpeta en el directorio files llamada translations con su debido archivo  
 Instala los modulos del nucleo (42 modulos)  
 Importa las traducciones de la carpeta translations  
