@@ -1,0 +1,207 @@
+{% extends 'evabase.html.twig' %}
+{% block title %}Welcome!{% endblock %}{#Titulo barra navegador#}
+{% block titulo %}{{parent()}}{% endblock %}{#Titulo interno página#}
+{% block field %}{{parent()}}
+{#  Adición de imagenes por campo en la plantilla #}
+<div class="row column">
+    <p style="font-family: 'Tangerine', cursive; font-size:56px;" class="lead ">Subtitulo Columna derecha</p>
+    <div class="media-object">
+        <div class="media-object-section">
+            <h5>Primera Imagen</h5>   <img class="thumbnail" src="http://placehold.it/100"> 
+        </div>
+    </div>
+    <div class="media-object">
+        <div class="media-object-section">
+            <h5>Segunda <br>Imagen</h5> <div class="media-object-section">  <img class="thumbnail" src="http://placehold.it/100">  </div>
+        </div>
+    </div>
+    <div class="media-object">
+        <div class="media-object-section">
+            <h5>Tercera <br>Imagen</h5> <div class="media-object-section">  <img class="thumbnail" src="http://placehold.it/100">  </div>
+        </div>
+    </div>
+    <div class="media-object">
+        <div class="media-object-section">
+            <h5>Cuarta <br>Imagen</h5>  <img style="max-width:100px; max-height:100px;" class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"> Linux
+        </div>
+    </div>
+</div>
+
+{% endblock %}{#Primer Texto Columna Izq#}
+{% block LeftColumn %}
+    <div class="row">
+        <div class="small-5 columns">
+            <form>
+                <div class="row column log-in-form">
+                    <h4 class="text-center">Sign In</h4>
+                    <label>Email
+                        <input type="text" placeholder="somebody@example.com">
+                    </label>
+                    <label>Password
+                        <input type="text" placeholder="Password">
+                    </label>
+                    <input id="show-password" type="checkbox">
+                    <label for="show-password">Show password</label>
+                    <p>
+                        <a href="/docente" type="submit" class="button expanded"> Log In </a>
+
+                        <a type="submit" class="button expanded">Log In As Invited</a>
+                    </p>
+                    <p class="text-center">
+                        <a href="#">Forgot your password?</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="small-7 columns text-center">
+            <div style="background:rgba(0,155,255, 0.8);
+                color: #FFFFFF ;
+                width:100%;
+                padding:30px;
+                border:10px solid #FFFFFF;
+                font-family: 'Calligraffitti'; font-size:23px;  font-weight:bold;	"  class="property-info-center">
+            <h3 style="margin: 10px; font-family: 'Tangerine'; font-size:60px; font-weight:bold;	">
+                    ... Eva es ...
+                </h3>
+                <p>Eva es un Sistema de Calificación<br>desarrollado por el Grupo de trabajo GNU/Linux Universidad Distrital Francisco José de Caldas
+                    <a style="font-family: 'Tangerine'; font-size:40px;   color: #000000 ;"href="https://gludblog.wordpress.com/">https://gludblog.wordpress.com</a>
+                    .... completar...</p>
+            </div>
+        </div>
+    </div>
+  <br>
+    <div class="row">
+        <div class="large-6 columns">
+            <!--Calendar-->
+            <h4 class="section-title" style="margin-bottom: 0px; padding-top: 3px;">
+                ~ Date:
+                <script>
+  var mydate=new Date();
+  var year=mydate.getYear();
+  if (year < 1000)
+  year+=1900;
+  var day=mydate.getDay();
+  var month=mydate.getMonth()+1;
+  if (month<10)
+  month="0"+month;
+  var daym=mydate.getDate();
+  if (daym<10)
+  daym="0"+daym;
+  if(month==5){
+  month="May";
+  }
+  if(month==6){
+  month="June";
+  }
+  document.write("<small><font color='000000' face=' Calligraffitti'><b>"+daym+" / "+month+" / "+year+"</b></font></small>")
+
+  </script>
+            </h4>
+            <br>
+            <div id="calendar">
+                <div style="clear: both;" align="left">
+                <table width="50" border="0" cellspacing="0" cellpadding="0" summary="Monthly calendar with links to each days posts">
+                    <caption class="calendar-date">May 2016</caption>
+                    <tr class="calendar-day">
+                        <th class="cal-2" abbr="Sunday" align="center">S</th>
+                        <th class="cal-1" abbr="Monday" align="center">M</th>
+                        <th class="cal-2" abbr="Tuesday" align="center">T</th>
+                        <th class="cal-1" abbr="Wednesday" align="center">W</th>
+                        <th class="cal-2" abbr="Thursday" align="center">T</th>
+                        <th class="cal-1" abbr="Friday" align="center">F</th>
+                        <th class="cal-2" abbr="Saturday" align="center">S</th>
+                    </tr>
+                    <tr>
+                        <td class="cal-2">   1   </td>
+                        <td class="cal-1">   2   </td>
+                        <td class="cal-2">   3   </td>
+                        <td class="cal-1">   4   </td>
+                        <td class="cal-2">   5   </td>
+                        <td class="cal-1">   6   </td>
+                        <td class="cal-2">   7   </td>
+                    </tr>
+                    <tr>
+                        <td class="cal-2">   8     </td>
+                        <td class="cal-1">      9                           </td>
+                        <td class="cal-2">      <div class="today">10</div>              </td>
+                        <td class="cal-1">      11                          </td>
+                        <td class="cal-2">      12                          </td>
+                        <td class="cal-1">      13                          </td>
+                        <td class="cal-2">      14                          </td>
+                    </tr>
+                    <tr>
+                        <td class="cal-2">      15                          </td>
+                        <td class="cal-1">      16                          </td>
+                        <td class="cal-2">      17                          </td>
+                        <td class="cal-1">      18                          </td>
+                        <td class="cal-2">      19                          </td>
+                        <td class="cal-1">      20                          </td>
+                        <td class="cal-2">      21                          </td>
+                    </tr>
+                    <tr>
+                        <td class="cal-2">      22                          </td>
+                        <td class="cal-1">      23                          </td>
+                        <td class="cal-2">      24                          </td>
+                        <td class="cal-1">      25                          </td>
+                        <td class="cal-2">      26                          </td>
+                        <td class="cal-1">      27                          </td>
+                        <td class="cal-2">      28                          </td>
+                    </tr>
+                    <tr>
+                        <td class="cal-2">      29                        </td>
+                        <td class="cal-1">      30                        </td>
+                        <td class="cal-2">      31                        </td>
+                        <td class="cal-1"></td>
+                        <td class="cal-2"></td>
+                        <td class="cal-1"></td>
+                        <td class="cal-2"></td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <form>
+                <div class="row column log-in-form">
+                    <h4 class="text-center">Sign Up</h4>
+                    <label>Name
+                        <input type="text" placeholder="Nombres">
+                    </label>
+                    <label>Last Name
+                        <input type="text" placeholder="Apellidos">
+                    </label>
+                    <label>Email
+                        <input type="text" placeholder="correo@gmail.com">
+                    </label>
+                    <div class="row field">
+                        <div class="small-12 columns">
+                            <label for="field_15">
+                                Rol
+                            </label>
+                            <select name="field_15" id="field_15">
+                                <option selected="selected" value="blank"></option>
+                                <option value="Teacher">Docente</option>
+                                <option value="Student">Estudiante</option>
+                            </select>
+                        </div>
+                        <!--<div class="small-12 columns">
+                        <div class="tooltip-container" id="tooltip-box-title_tooltip"><a href="javascript:void()">?</a></div>                                                                </div>-->
+                    </div>
+                    <p>
+                        <a type="submit" class="button expanded">Enviar!</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        .log-in-form {
+            border: 1px solid #cacaca;
+            padding: 1rem;
+            border-radius: 3px;
+        }
+    </style>
+{% endblock %}

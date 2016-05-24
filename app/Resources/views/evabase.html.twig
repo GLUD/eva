@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> ~ Eva |{% block title %}{% endblock %}</title>
+    <!--Inclusi�n de Fuentes, tomadas de:https://www.google.com/fonts/-->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'> {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+    <style>
+        .eva {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            border: none;
+            font: normal 196px/1 "cookie", 'Norican', sans-serif;
+            color: rgba(0, 0, 0, 1);
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            background: rgb(255, 255, 255);
+            text-shadow: 4px 4px 6px rgba(0, 155, 255, 0.8);
+            -webkit-transform: rotateX(-32.65859432245692deg) rotateY(5.156620156177409deg);
+            transform: rotateX(-32.65859432245692deg) rotateY(5.156620156177409deg);
+        }
+
+
+
+        .fi-social-facebook {
+            color: dodgerblue;
+            font-size: 2rem;
+        }
+
+        .fi-social-youtube {
+            color: red;
+            font-size: 2rem;
+        }
+
+        .fi-social-twitter {
+            color: skyblue;
+            font-size: 2rem;
+        }
+
+        body {
+            margin-top: 2rem;
+        }
+
+        .title-bar {
+            background: #333;
+            padding: 0.9rem;
+        }
+
+        .top-bar {
+            background: #333;
+        }
+
+        .top-bar ul {
+            background: #333;
+        }
+
+        .top-bar ul li {
+            background: #333;
+        }
+
+        .top-bar ul li a {
+            color: #fff;
+        }
+
+        .menu-text {
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 40em) {
+            .menu-text {
+                display: none !important;
+            }
+        }
+
+        @media only screen and (min-width: 40em) {
+            .top-bar .menu:last-child {
+                border-left: 1px solid #4e4e4e;
+            }
+            .top-bar .menu:first-child {
+                border-left: none;
+            }
+            .top-bar .menu li:not(:last-child) {
+                border-right: 1px solid #4e4e4e;
+            }
+        }
+
+        .dropdown.menu .submenu {
+            border: none;
+        }
+
+        .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
+            border-color: #fff transparent transparent;
+        }
+
+        .is-drilldown-submenu-parent > a::after {
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .js-drilldown-back::before {
+            border-color: transparent #fff transparent transparent;
+        }
+    </style>
+    <header>
+        {#
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>#}
+        <div class="row">
+            <div class="medium-4 columns">
+                <img src="http://placehold.it/450x183&text=LOGO EVA" alt="company logo">
+            </div>
+            <div class="medium-7 columns expanded text-right">
+                {#- <img src="https://s-media-cache-ak0.pinimg.com/originals/91/34/23/913423498f0249fcf8d39f9301324e7f.png" alt="Error">-#}
+                <div class="eva">Eva</div>
+            </div>
+        </div>
+        <br> {#------#}
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+                    <li><a href="/main" class="btn btn-sucess">Página Principal</a></li>
+                    <li class="has-submenu">
+                        <a href="#">{% block btn1 %} a {% endblock %}</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="#">{% block opc1 %} a {% endblock %}</a></li>
+                            <li><a href="#">{% block opc2 %} b {% endblock %}</a></li>
+                            <li><a href="#">{% block opc3 %} c {% endblock %}</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/createExam" class="btn btn-sucess">{% block btn2 %} a {% endblock %}</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <ul class="menu">
+                        <li>
+                            <input type="search" placeholder="Search">
+                        </li>
+                        <li>
+                            <button type="button" class="button">Search</button>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>{#--------#}
+    </header>
+    <br>
+    <hr>
+    <div class="row column">
+        <h5 style="margin: 0; font-family: 'Tangerine'; font-size:50px;" class="text-center">{% block titulo %} ~ Bienvenido ! {% endblock %}</h5>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+            {% block LeftColumn %} {% endblock %}
+        </div>
+        <div class="large-4 columns">
+            <aside>
+                <div class="row column">
+                    {% block field %}Columna Izq {% endblock %}
+                    <br>
+                </div>
+                <br>
+                <hr>
+                <div class="row small-up-3">
+                    <div class="column text-center">
+                        <i class="fi-social-facebook"></i>
+                        <a target="_blank" href="https://www.facebook.com/GrupoLinuxUD/?fref=ts">	Grupo GNU/Linux UD</a>
+                        <br>
+                    </div>
+                    <div class="column text-center">
+                        <i class="fi-social-twitter"></i>
+                        <a target="_blank" href="https://twitter.com/grupolinuxud">	Twitter GLUD </a>
+                        <br>
+                    </div>
+                    <div class="column text-center">
+                        <i class="fi-social-youtube"></i>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCWPIj_ZjOM94VRf4X2h_Kvg">	Radio GLUD </a>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+    <hr>
+    <div class="row column">
+        <h3 style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 20; font-family: 'Tangerine', cursive; font-size:56px;	" class="text-center"> Grupo de trabajo GNU / Linux Universidad Distrital Francisco José de Caldas</h3S>
+    </div>
+    <hr>
+    <footer>
+        <div class="ten columns">
+            	<ul class="nav-bar right">
+                    <div class="show-for-small" style="background:#FFFFFF; padding:10px;">
+                    <div style="width:30%; margin-right:5%; float:left;">
+                    	<a href="https://glud.org/">
+                        {# Logo Glud #}
+                       <div class="kokopelli"><img class="thumbnail" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/13015145_1154980181208412_6240606777766531522_n.png?oh=223129eb765f354192c497bbaa32b3bd&oe=57E16126&__gda__=1469991057_acfc660301bf3d8c3eb5f21f152d23d0" alt="image of space dog"></div>
+                        </a>
+            		</div>
+                    <div style="width:30%; margin-right:5%; float:left;">
+              			<p style="margin: 0; font-family: 'Lote', cursive; font-size:20px;" class="text-center"> Sede Central <br> Edificio Alejandro<br>Suárez Copete. <br> Carrera 8 No. 40 Piso 2. <br> Bogotá, Colombia </p>
+                        </a>
+            		</div>
+                    <div style="width:30%; float:left;">
+                    	<a href="http://rita.udistrital.edu.co/ingenieria/">
+                        {# Logo UD #}
+                           <div class="UD"><img class="thumbnail" src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/12507117_235679856763097_6091731505178560444_n.jpg?oh=be77cc1b10f7484cbf19216d8ababa00&oe=57AEA4AF&__gda__=1474701765_e6428e0762743f003e6432d176caa322" alt="image of space dog"></div>
+                        </a>
+            		</div>
+                    <div style="clear:both;"></div>
+                    </div>
+              	</ul>
+            </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+    {% block javascripts %}    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends 'evabase.html.twig' %}
+
+{% block title %}
+    createExam!{% endblock %}
+
+{% block field1 %}{% endblock %}
+{% block titulo %}{{parent()}}{% endblock %}
+
+{% block LeftColumn %}
+    <div style="margin: 0; font-family: 'Tangerine'; font-size:40px;font-weight:bold;" class="top-bar-left">
+        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+            <li class="has-submenu">
+                <a href="#">Añadir Pregunta</a>
+                <ul class="submenu menu vertical" data-submenu>
+                    <li>
+                        <a href="#">Pregunta para adjuntar archivo.</a>
+                    </li>
+                    <li>
+                        <a href="#">Pregunta Abierta.</a>
+                    </li>
+                    <li>
+                        <a href="#">Pregunta de selección múltiple (múltiple respuesta).</a>
+                    </li>
+                    <li>
+                        <a href="#">Pregunta de Falso o Verdadero.</a>
+                    </li>
+                    <li>
+                        <a href="#">Pregunta para Unir.</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    Guardar Examen
+                </a>
+            </li>
+
+            <li>
+                <a href="#">Salir Sin Guardar</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+{% endblock %}
+
+{% block field %}
+
+    <div class="large-4 columns">
+        <h4>-</h4>
+        <a href="#" data-reveal-id="firstModal" class="radius button">Question…</a>
+
+        <div style="display: none;"></div>
+
+        <div style="display: none; opacity: 1; visibility: hidden; top: 842px;" id="secondModal" class="reveal-modal" data-reveal="" aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
+            <h2 id="secondModalTitle">This is a second modal.</h2>
+            <p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+            <a class="close-reveal-modal" aria-label="Close">×</a>
+        </div>
+
+    </div>
+{% endblock %}

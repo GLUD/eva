@@ -1,0 +1,58 @@
+body{
+	/*Color Hexadecimal Fondo*/
+	background:#000000; 
+	/*Color Fuente*/
+	color:#FFFFFF;
+	font-size:19px;	
+	text-transform:capitalize;
+	font-family: 'Handlee', cursive;
+}
+
+h1{
+	/*h1 en Index aunque se declaro en mínuscula, la siguiente linea pone en mayuscula el texto : text-transform:uppercase;*/
+	/*border-bottom:solid;*/
+	/* Coloca sombra: text-shadow:0px 0px 30px rgba(#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF);*/
+	font-family: 'UnifrakturMaguntia', cursive;
+}	
+
+h2{
+	text-align:right;
+	font-family: 'UnifrakturMaguntia', cursive;
+	color:gray;
+	background:#ccc;
+	text-decoration:underline;
+}
+
+h3{
+	font-family: 'UnifrakturMaguntia', cursive;
+}
+
+blockquote{
+	background:#00BFFF/*#22DCC9*/;
+	color: #FFFFFF ;
+	width:90%;
+	margin:30px 50px; 
+	padding:30px; 
+	border:10px solid #FFFFFF;
+	font-family: 'Calligraffitti', cursive;
+	/* Fuente Opcional */
+	/*font-family: "Courier New", Times, Monospace;  Fuente predetermianda de CSS */
+	font-weight:bold;
+	
+}
+
+footer{
+	font-family: 'UnifrakturMaguntia', cursive;
+	font-size:20px;
+}
+
+p{
+	font-family: 'Indie Flower', cursive;
+	/*Color Fuente*/
+	color:#FFFFFF;
+	font-size:19px;	
+	text-transform:capitalize;
+}
+
+
+
