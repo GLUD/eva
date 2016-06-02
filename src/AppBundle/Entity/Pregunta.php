@@ -69,5 +69,25 @@ class Pregunta
     {
         return $this->pregunta;
     }
+    
+    /**
+     * Set tipo
+     *
+     * @return int
+     */
+    public function setTipo()
+    {
+        return $this->id;
+    }
+    
+    /**
+     * Get tipo
+     *
+     * @return int
+     */
+    public function getTipo()
+    {
+        return $this->id;
+    }
 }
 
