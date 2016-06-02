@@ -4,6 +4,8 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * TipoPregunta
  *
@@ -27,6 +29,16 @@ class TipoPregunta
      * @ORM\Column(name="tipo", type="string", length=50, unique=true)
      */
     private $tipo;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Pregunta", mappedBy="tipoPregunta")
+     */
+    private $preguntas;
+    
+    public function __construct()
+    {
+        $this->preguntas = new ArrayCollection();
+    }
 
 
     /**
@@ -61,5 +73,39 @@ class TipoPregunta
     public function getTipo()
     {
         return $this->tipo;
+    }
+
+    /**
+     * Add pregunta
+     *
+     * @param \AppBundle\Entity\Pregunta $pregunta
+     *
+     * @return TipoPregunta
+     */
+    public function addPregunta(\AppBundle\Entity\Pregunta $pregunta)
+    {
+        $this->preguntas[] = $pregunta;
+
+        return $this;
+    }
+
+    /**
+     * Remove pregunta
+     *
+     * @param \AppBundle\Entity\Pregunta $pregunta
+     */
+    public function removePregunta(\AppBundle\Entity\Pregunta $pregunta)
+    {
+        $this->preguntas->removeElement($pregunta);
+    }
+
+    /**
+     * Get preguntas
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPreguntas()
+    {
+        return $this->preguntas;
     }
 }

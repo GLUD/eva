@@ -40,33 +40,103 @@ class LoadUserData implements FixtureInterface
         
         $pregunta = new Pregunta();
         $pregunta->setPregunta('¿Qué es blanco?');
-		$pregunta->setTipo(1);
+		$pregunta->setTipoPregunta($tipoPregunta1);
         $manager->persist($pregunta);
+        
+        /*INICIO Respuestas*/
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Perro');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Huevo');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Gallina');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Pelota de Golf');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);        
+        /*FIN Respuestas*/
         
 		$pregunta = new Pregunta();
         $pregunta->setPregunta('¿Qué es blanco y gallina lo pone?');
-		$pregunta->setTipo(2);
+		$pregunta->setTipoPregunta($tipoPregunta2);
         $manager->persist($pregunta);
+        
+        /*INICIO Respuestas*/
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Perro');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Huevo');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Gallina');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Pelota de Golf');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);        
+        /*FIN Respuestas*/
         
         $pregunta = new Pregunta();
         $pregunta->setPregunta('¿Los perros van al cielo?');
-		$pregunta->setTipo(3);
+		$pregunta->setTipoPregunta($tipoPregunta3);
         $manager->persist($pregunta);
+        
+        /*INICIO Respuestas*/
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Falso');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('Verdadero');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);    
+        /*FIN Respuestas*/
         
         $pregunta = new Pregunta();
         $pregunta->setPregunta('Empareje los estereotipos');
-		$pregunta->setTipo(4);
+		$pregunta->setTipoPregunta($tipoPregunta4);
         $manager->persist($pregunta);
         
         $pregunta = new Pregunta();
         $pregunta->setPregunta('¿Cuánto da 5 por 8?');
-		$pregunta->setTipo(5);
+		$pregunta->setTipoPregunta($tipoPregunta5);
         $manager->persist($pregunta);
+        
+        /*INICIO Respuestas*/
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('40');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        /*FIN Respuestas*/
         
         $pregunta = new Pregunta();
         $pregunta->setPregunta('¿Cuál es el mejor editor para symfony?');
-		$pregunta->setTipo(6);
+		$pregunta->setTipoPregunta($tipoPregunta6);
         $manager->persist($pregunta);
+        
+        /*INICIO Respuestas*/
+        $respuesta = new Respuesta();
+        $respuesta->setRespuesta('atom');
+		$respuesta->setPregunta($pregunta);
+        $manager->persist($respuesta);
+        /*FIN Respuestas*/
         
         $manager->flush();
     }

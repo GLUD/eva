@@ -35,7 +35,7 @@ class Pregunta
      * @ORM\ManyToOne(targetEntity="TipoPregunta", inversedBy="preguntas")
      * @ORM\JoinColumn(name="tipo_id", referencedColumnName="id")
      */
-    private $tipoPregunta;
+    private $tipo;
     
     
     /**
@@ -82,62 +82,5 @@ class Pregunta
     {
         return $this->pregunta;
     }
-
-    /**
-     * Add respuesta
-     *
-     * @param \AppBundle\Entity\Respuesta $respuesta
-     *
-     * @return Pregunta
-     */
-    public function addRespuesta(\AppBundle\Entity\Respuesta $respuesta)
-    {
-        $this->respuestas[] = $respuesta;
-
-        return $this;
-    }
-
-    /**
-     * Remove respuesta
-     *
-     * @param \AppBundle\Entity\Respuesta $respuesta
-     */
-    public function removeRespuesta(\AppBundle\Entity\Respuesta $respuesta)
-    {
-        $this->respuestas->removeElement($respuesta);
-    }
-
-    /**
-     * Get respuestas
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getRespuestas()
-    {
-        return $this->respuestas;
-    }
-    
-    /**
-     * Set tipoPregunta
-     *
-     * @param \AppBundle\Entity\TipoPregunta $tipoPregunta
-     *
-     * @return Pregunta
-     */
-    public function setTipoPregunta(\AppBundle\Entity\TipoPregunta $tipoPregunta)
-    {
-        $this->tipoPregunta = $tipoPregunta;
-
-        return $this;
-    }
-
-    /**
-     * Get tipoPregunta
-     *
-     * @return \AppBundle\Entity\TipoPregunta
-     */
-    public function getTipoPregunta()
-    {
-        return $this->tipoPregunta;
-    }
 }
+

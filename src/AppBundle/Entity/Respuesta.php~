@@ -68,28 +68,5 @@ class Respuesta
     {
         return $this->respuesta;
     }
-
-    /**
-     * Set pregunta
-     *
-     * @param \AppBundle\Entity\Pregunta $pregunta
-     *
-     * @return Respuesta
-     */
-    public function setPregunta(\AppBundle\Entity\Pregunta $pregunta = null)
-    {
-        $this->pregunta = $pregunta;
-
-        return $this;
-    }
-
-    /**
-     * Get pregunta
-     *
-     * @return \AppBundle\Entity\Pregunta
-     */
-    public function getPregunta()
-    {
-        return $this->pregunta;
-    }
 }
+
