@@ -1,13 +1,13 @@
 <?php
 
-namespace Glud\ServiceBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Glud\ServiceBundle\Entity\Examen;
-use Glud\ServiceBundle\Form\ExamenType;
+use AppBundle\Entity\Examen;
+use AppBundle\Form\ExamenType;
 
 /**
  * Examen controller.
@@ -26,7 +26,7 @@ class ExamenController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $examens = $em->getRepository('GludServiceBundle:Examen')->findAll();
+        $examens = $em->getRepository('AppBundle:Examen')->findAll();
 
         return $this->render('examen/index.html.twig', array(
             'examens' => $examens,
@@ -42,7 +42,7 @@ class ExamenController extends Controller
     public function newAction(Request $request)
     {
         $examan = new Examen();
-        $form = $this->createForm('Glud\ServiceBundle\Form\ExamenType', $examan);
+        $form = $this->createForm('AppBundle\Form\ExamenType', $examan);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -84,7 +84,7 @@ class ExamenController extends Controller
     public function editAction(Request $request, Examen $examan)
     {
         $deleteForm = $this->createDeleteForm($examan);
-        $editForm = $this->createForm('Glud\ServiceBundle\Form\ExamenType', $examan);
+        $editForm = $this->createForm('AppBundle\Form\ExamenType', $examan);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

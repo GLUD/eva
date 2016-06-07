@@ -1,6 +1,6 @@
 <?php
 
-namespace Glud\ServiceBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Examen
  *
  * @ORM\Table(name="examen")
- * @ORM\Entity(repositoryClass="Glud\ServiceBundle\Repository\ExamenRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ExamenRepository")
  */
 class Examen
 {
