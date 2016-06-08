@@ -2,15 +2,16 @@ Proyecto EVA ( Sistema de Evaluacion de Ingreso de Candidatos al Grupo GNU/Linux
 =========
 
 
-Proyecto de desarrollado pro el grupo Gnu/Linux de la Universidad Distrital
+Proyecto de desarrollado por el Grupo de trabajo Gnu/Linux de la Universidad Distrital
 
-Descripcion del proyecto
-El proyecto busca gnerar una plataforma centraizada, donde los aspirantes a ser candidatos para miembros del grupo, puedan accesar auna plataforma donde se le brinden herrameintas de diagnostico estudio y guia , par aal final del proceso por medio una serie de procesos estipulados por los estatutos del grupo, en donde, en uno de los aprtes que se tiene inicialmente se tiene l arealizacion de un examen
+Descripcion del proyecto.
+
+El proyecto busca generar una plataforma centralizada, donde los aspirantes a ser candidatos a miembros del grupo, o de difenrentes estudiantes o miembros de la comunidd en general deseeen conocer de entre de la oferta de cursos que dentro del grupo se puedan desarrollar, para que estos puedan accesar a una plataforma, donde se le brinden herramientas de: diagnostico, estudio y guia. Al final del proceso, por medio una serie de procesos estipulados por los estatutos del grupo, en uno de los apartes que se tiene la realizacion de un examen, segun los intens minimos establecidos por cada curso, y que  se estipulara una serie de diferentes actividades, en el transcurso de los cursos, que servira como herramienta para poder permitir otorgar algun rococimiento a los cursos ofertados
 
 
 Objetivos
 
-Se espera lograr una curva de aprendizaje del manejo de las diferentes herramientas, segun sus aptitudes por parte de cada uno de los miembros del grupo de trabajo cnu/linux de la Universidad Distrital, para el año 2016 y consecuentes en os que el proyecto este vijente, en el cronograma de desarrollo de proyectos , donde en el proyecto se realizara una busqueda del aumentar e nivel de produccion dentro de sus miembros
+Se espera lograr una curva de aprendizaje del manejo de las diferentes herramientas, segun sus aptitudes por parte de cada uno de los miembros del grupo de trabajo cnu/linux de la Universidad Distrital, para el año 2016 y consecuentes en los que el proyecto este vijente, en el cronograma de desarrollo de proyectos , donde en el proyecto se realizara una busqueda del aumentar e nivel de produccion  de piesas de software dentro de sus miembros
 
 Desarrollo de una plataforma de evaluacion, que se desarrollara con herramientas libres, de tal manera que permita la articulacion visual, diseño e implementacion del proyecto segun las necesidades. y las etapas de desarrollo, segun las areas que se generen a nivel interno del grupo, siguiendo los lineamientos de maquetacion
 
@@ -23,7 +24,7 @@ Herramientas de desarrollo
 Finalidad del proyecto
 
 Desarrollar una plataforma libre que permita:
-gestionamiento de los cursos dictados en el grupo, la unifucacion y administraccion de activiades propias que permita e se enlace los perfiles de ususario donde se permita que se dictaran en el grupo
+gestionamiento de los cursos dictados en el grupo, la unifucacion y administraccion de activiades propias que permita el enlace los perfiles de ususario 
 
 Proyecto de apropiacion del conocimiento de herramientas de tecnologias libres basado en symfony para la creacion de examenes virtuales para realizar evaluaciones a los candidatos a miembros activos del grupo GNU/Linux Universidad Distrital. 
 
