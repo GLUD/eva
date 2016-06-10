@@ -1,32 +1,33 @@
-Proyecto EVA ( Sistema de Evaluacion de Ingreso de Candidatos al Grupo GNU/Linux Universidad Distrital)
+Proyecto EVA ( Sistema de Evaluación de Ingreso de Candidatos al Grupo GNU/Linux Universidad Distrital)
 =========
 
 
-Proyecto de desarrollado por el Grupo de trabajo Gnu/Linux de la Universidad Distrital
+Proyecto de desarrollado por el Grupo de Trabajo Gnu/Linux de la Universidad Distrital
 
-Descripcion del proyecto.
+Descripción del proyecto.
 
-El proyecto busca generar una plataforma centralizada, donde los aspirantes a ser candidatos a miembros del grupo, o de difenrentes estudiantes o miembros de la comunidd en general deseeen conocer de entre de la oferta de cursos que dentro del grupo se puedan desarrollar, para que estos puedan accesar a una plataforma, donde se le brinden herramientas de: diagnostico, estudio y guia. Al final del proceso, por medio una serie de procesos estipulados por los estatutos del grupo, en uno de los apartes que se tiene la realizacion de un examen, segun los intens minimos establecidos por cada curso, y que  se estipulara una serie de diferentes actividades, en el transcurso de los cursos, que servira como herramienta para poder permitir otorgar algun rococimiento a los cursos ofertados
+El proyecto busca generar una plataforma centralizada, donde los aspirantes a ser candidatos a miembros del grupo, o de diferentes estudiantes o miembros de la comunidad en general deseen conocer de entre de la oferta de cursos, que dentro del grupo se puedan desarrollar, para que estos puedan acceder a una plataforma, donde se le brinden herramientas de: diagnóstico, estudio y guía. Al final del proceso, por medio una serie de procesos estipulados por los estatutos del grupo, en uno de los apartes que se tiene la realización de un examen, según los ítems mínimos establecidos por cada curso, y que  se estipulara una serie de diferentes actividades, en el transcurso de los cursos, que servirá como herramienta para poder permitir otorgar algún reconocimiento a los cursos ofertados
 
 
 Objetivos
 
-Se espera lograr una curva de aprendizaje del manejo de las diferentes herramientas, segun sus aptitudes por parte de cada uno de los miembros del grupo de trabajo cnu/linux de la Universidad Distrital, para el año 2016 y consecuentes en los que el proyecto este vijente, en el cronograma de desarrollo de proyectos , donde en el proyecto se realizara una busqueda del aumentar e nivel de produccion  de piesas de software dentro de sus miembros
+Se espera lograr una curva de aprendizaje del manejo de las diferentes herramientas, según sus aptitudes por parte de cada uno de los miembros del grupo de trabajo Gnu/Linux de la Universidad Distrital, para el año 2016 y consecuentes en los que el proyecto esté vigente, en el cronograma de desarrollo de proyectos , donde en el proyecto se realizará una búsqueda de aumentar el nivel de producción  de piezas de software dentro de sus miembros
 
-Desarrollo de una plataforma de evaluacion, que se desarrollara con herramientas libres, de tal manera que permita la articulacion visual, diseño e implementacion del proyecto segun las necesidades. y las etapas de desarrollo, segun las areas que se generen a nivel interno del grupo, siguiendo los lineamientos de maquetacion
+Desarrollo de una plataforma de evaluación, que se desarrollara con herramientas libres, de tal manera que permita la articulación visual, diseño e implementación del proyecto según las necesidades y las etapas de desarrollo, según las áreas que se generen a nivel interno del grupo, siguiendo los lineamientos de maquetación
 
-El proyecto busca desarrollar piezas de software, con buenas practicas de desarrollo
+El proyecto busca desarrollar piezas de software, con buenas prácticas de desarrollo
 
 Herramientas de desarrollo
 
-    Symfoni 2.8 Composer BoostrapDraw Doctrine angular Doctrine Mysql Php Css less
+    Symfony 2.8 Composer, Boostrap, Draw, Doctrine, Angular, Doctrine, Mysql, Php, Css, less
 
 Finalidad del proyecto
 
-Desarrollar una plataforma libre que permita:
-gestionamiento de los cursos dictados en el grupo, la unifucacion y administraccion de activiades propias que permita el enlace los perfiles de ususario 
+Desarrollar una plataforma libre que permita: gestionamiento de los cursos dictados en el grupo, la unificación y administración de actividades propias que permita el enlace los perfiles de usuario.
 
-Proyecto de apropiacion del conocimiento de herramientas de tecnologias libres basado en symfony para la creacion de examenes virtuales para realizar evaluaciones a los candidatos a miembros activos del grupo GNU/Linux Universidad Distrital. 
+Proyecto de apropiación del conocimiento de herramientas de tecnologías libres basado en symfony para la creación de exámenes virtuales para realizar evaluaciones a los candidatos a miembros activos del grupo GNU/Linux Universidad Distrital.
+
+
 
 __________
 
