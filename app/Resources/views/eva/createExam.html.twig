@@ -1,64 +1,273 @@
 {% extends 'evabase.html.twig' %}
 
-{% block title %}
-    createExam!{% endblock %}
+{% block title %}createExam!{% endblock %}
 
-{% block field1 %}{% endblock %}
 {% block titulo %}{{parent()}}{% endblock %}
 
+{% block btn1href %}/docente {% endblock %}
+{% block btn1 %}Salir Sin Guardar{% endblock %}
+{% block btn2href %}/docente{% endblock %}
+{% block btn2 %}Guardar Examen{% endblock %}
+
+{% block btnAdicional %}
+<li class="has-submenu">
+        <a href="#">
+            Añadir Pregunta
+        </a>
+        <ul class="submenu menu vertical" data-submenu>
+
+        <li>
+            <a href="#" id="openQ" class="button">Pregunta Abierta</a>
+        </li>
+        <li>
+            <a href="#" id="attach" class="button">Pregunta para Adjuntar Archivo</a>
+        </li>
+        <li>
+            <a href="#" id="multiple" class="button">Pregunta de Selección múltiple con múltiple Respuesta</a>
+        </li>
+        <li>
+            <a href="#" id="falseortrue" class="button">Pregunta de Falso o Verdadero</a>
+        </li>
+        <li>
+            <a href="#" id="matching" class="button">Pregunta para Unir</a>
+        </li>
+    </ul>
+</li>
+{% endblock %}
+
+{% block afterBody %}
+
+<div id="matchingQuestion" title="Pregunta para Unir" style="display:none;">{#style oculta el Modal#}
+  <p>Porfavor, ingrese la pregunta:</p>  <input placeholder="large-4.columns" type="text">
+    {# Texto ventana#}   <p>ahora, ingrese las opciones, enfrente la respuesta correcta:</p> <table>
+    <tr>
+      <td><input placeholder="uno" type="text"></td>
+      <td><input placeholder="dos" type="text"></td>
+
+    </tr>
+
+    <tr>
+      <td><input placeholder="tres" type="text"></td>
+      <td><input placeholder="cuatro" type="text"></td>
+    </tr>
+
+
+    </table>
+</div>
+
+<div id="attachQuestion" title="Pregunta para Adjuntar Archivo" style="display:none;">{#style oculta el Modal    <div class="_6a _m _4q60"><a class="_213 _4q61 uiButton" role="button"><i class="mrs customimg img sp_NilgNYGgHIE_1_5x sx_575070"></i><span class="uiButtonText"><span class="_6q- _6qy">Add Files</span></span><div class="_3jk"><input id="js_2s" class="_n _5f0v" name="attachment[]" multiple="1" type="file"></div></a></div>#}
+    <p>Porfavor, ingrese la pregunta:</p> <input placeholder="large-4.columns" type="text">
+</div>
+
+<div id="openQQuestion" title="Pregunta Abierta" style="display:none;">{#style oculta el Modal#}
+    <p>Porfavor, ingrese la pregunta:</p>  <input placeholder="large-4.columns" type="text">   {#{% set foo = '2' %} {{foo}}#}
+    <p>La respuesta a esta pregunta no será calificada por el sistema, se enviará a su correo (y será guardada en la lista de exámenes) para ser calificada.</p>
+</div>
+
+<div id="falseortrueQuestion" title="Falso o Verdadero" style="display:none;">  {#style oculta el Modal#}
+    <p>Porfavor, ingrese la pregunta:</p> <input placeholder="ingrese la pregunta" type="text"><p>seleccione la respuesta:</p>
+    <table>
+    <tr>
+      <td><form method="get" action="http://aprenderaprogramar.com/action.php">
+       <input name="intereses" type="radio" value="rbiinternet" checked="checked" />
+       </form></td>
+      <td><p>Verdadero</p></td>
+    </tr>
+    <tr>
+      <td><form method="get" action="http://aprenderaprogramar.com/action.php">
+       <input name="intereses" type="radio" value="rbiinternet" checked="checked" />
+       </form></td>
+      <td><p>Falso</p></td>
+    </tr>
+    </table>
+</div>
+
+
+<div id="multipleQuestion" title="Pregunta Selección múltiple" style="display:none;">{#style oculta el Modal#}
+    <p>Porfavor, ingrese la pregunta:</p>
+    <input placeholder="large-4.columns" type="text">
+     <table>
+     <tr>
+       <td><form method="get" action="http://aprenderaprogramar.com/action.php">
+
+        <input name="intereses" type="radio" value="rbiinternet" checked="checked" />
+        </form></td>
+       <td><input placeholder="primeraOpción" type="text"></td>
+
+     </tr>
+
+     <tr>
+       <td><form method="get" action="http://aprenderaprogramar.com/action.php">
+
+        <input name="intereses" type="radio" value="rbiinternet" checked="checked" />
+        </form></td>
+       <td><input placeholder="SegundaOpción" type="text"></td>
+
+     </tr>
+
+
+     </table>
+
+
+    {# Texto ventana#}
+</div>
+
+{% endblock %}
+
+ {% block javascripts %}
+<script src="{{ asset('js/jquery.js') }}" type="text/javascript"> </script>
+<script src="{{ asset('js/jquery-ui.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/jquery-ui.js') }}" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+$('#attach').button();
+{
+    {# Formatea el boton#}
+}
+
+    $('#matching').button();
+    {
+        {# Formatea el boton#}
+    }
+    $('#multiple').button();
+    {
+        {# Formatea el boton#}
+    }
+    $('#openQ').button();
+    {
+        {# Formatea el boton#}
+    }
+    $('#falseortrue').button();
+    {
+        {# Formatea el boton#}
+    }
+
+    {# Formato de la ventana de dialogo#}
+
+    $('#openQQuestion').dialog({
+        autoOpen: false,
+        modal: true,
+        width: 350,
+        height: 400,
+
+        buttons: {
+            Guardar: function() {
+                {#window.location.href = "http://www.google.com";#}
+            },
+
+            Cerrar: function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+    $('#attach').dialog({
+        autoOpen: false,
+        modal: true,
+        width: 350,
+        height: 200,
+
+        buttons: {
+            Guardar: function() {
+                {#window.location.href = "http://www.google.com";#}
+            },
+
+            Cerrar: function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+
+    $('#matchingQuestion').dialog({
+        autoOpen: false,
+        modal: true,
+        width: 400,
+        height: 450,
+
+        buttons: {
+            Guardar: function() {
+                {# window.location.href = "http://www.google.com"; #}
+            },
+            Añadir: function() {
+                {# window.location.href = "http://jqueryui.com"; #}
+            },
+            Cerrar: function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+    $('#falseortrueQuestion').dialog({
+        autoOpen: false,
+        modal: true,
+        width: 300,
+        height: 400,
+
+
+                buttons: {
+                    Guardar: function() {
+                        {#window.location.href = "http://www.google.com";#}
+                    },
+
+                    Cerrar: function() {
+                        $(this).dialog("close");
+                    }
+                }
+    });
+
+
+    $('#multipleQuestion').dialog({
+        autoOpen: false,
+        modal: false,
+        width: 400,
+        height: 400,
+
+        buttons: {
+            AñadirOpción: function() {
+              {#  window.location.href = "http://www.google.com";#}
+            },
+            GuardarPregunta: function() {
+              {# window.location.href = "http://jqueryui.com";#}
+            },
+          {#Cerrar: function() {
+                $(this).dialog("close");
+            }#}
+        }
+    });
+
+    $('#matching').click(function() {
+        {# Mjuestra el dialogo la hacer click#}
+        $('#matchingQuestion').dialog('open');
+    });
+    $('#attach').click(function() {
+        {# Mjuestra el dialogo la hacer click#}
+        $('#attachQuestion').dialog('open');
+    });
+
+
+    $('#openQ').click(function() {
+        {# Mjuestra el dialogo la hacer click#}
+        $('#openQQuestion').dialog('open');
+    });
+
+    $('#falseortrue').click(function() {
+        {# Mjuestra el dialogo la hacer click#}
+        $('#falseortrueQuestion').dialog('open');
+    });
+
+
+    $('#multiple').click(function() {
+        {# Mjuestra el dialogo la hacer click#}
+        $('#multipleQuestion').dialog('open');
+    });
+
+});
+</script>
+
+{% endblock %}
+
 {% block LeftColumn %}
-    <div style="margin: 0; font-family: 'Tangerine'; font-size:40px;font-weight:bold;" class="top-bar-left">
-        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-            <li class="has-submenu">
-                <a href="#">Añadir Pregunta</a>
-                <ul class="submenu menu vertical" data-submenu>
-                    <li>
-                        <a href="#">Pregunta para adjuntar archivo.</a>
-                    </li>
-                    <li>
-                        <a href="#">Pregunta Abierta.</a>
-                    </li>
-                    <li>
-                        <a href="#">Pregunta de selección múltiple (múltiple respuesta).</a>
-                    </li>
-                    <li>
-                        <a href="#">Pregunta de Falso o Verdadero.</a>
-                    </li>
-                    <li>
-                        <a href="#">Pregunta para Unir.</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">
-                    Guardar Examen
-                </a>
-            </li>
-
-            <li>
-                <a href="#">Salir Sin Guardar</a>
-            </li>
-
-        </ul>
-
-    </div>
 
 {% endblock %}
 
-{% block field %}
-
-    <div class="large-4 columns">
-        <h4>-</h4>
-        <a href="#" data-reveal-id="firstModal" class="radius button">Question…</a>
-
-        <div style="display: none;"></div>
-
-        <div style="display: none; opacity: 1; visibility: hidden; top: 842px;" id="secondModal" class="reveal-modal" data-reveal="" aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
-            <h2 id="secondModalTitle">This is a second modal.</h2>
-            <p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
-            <a class="close-reveal-modal" aria-label="Close">×</a>
-        </div>
-
-    </div>
-{% endblock %}
+{% block field %}{% endblock %}

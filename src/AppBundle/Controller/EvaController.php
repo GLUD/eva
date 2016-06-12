@@ -25,20 +25,8 @@ class EvaController extends Controller
      */
     public function mainAction(Request $request)
     {
-
       // replace this example code with whatever you need
       return $this->render('eva/index.html.twig', array(
-          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-      ));
-    }
-
-    /**
-     * @Route("/dos", name="homepage3")
-     */
-    public function dosAction(Request $request)
-    {
-      // replace this example code with whatever you need
-      return $this->render('eva/dos.html.twig', array(
           'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
       ));
     }
@@ -55,7 +43,7 @@ class EvaController extends Controller
     }
 
     /**
-     * @Route("/docente", name="createExam")
+     * @Route("/docente", name="docente")
      */
     public function docenteAction(Request $request)
     {
@@ -66,7 +54,29 @@ class EvaController extends Controller
     }
 
     /**
-     * @Route("/plantilla", name="createExam")
+     * @Route("/invitado", name="invitado")
+     */
+    public function invitadoAction(Request $request)
+    {
+      // replace this example code with whatever you need
+      return $this->render('eva/invitado.html.twig', array(
+          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+      ));
+    }
+
+    /**
+     * @Route("/ListaExamenes", name="listaExmanes")
+     */
+    public function ListaExamenesAction(Request $request)
+    {
+      // replace this example code with whatever you need
+      return $this->render('eva/ListaExamenes.html.twig', array(
+          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+      ));
+    }
+
+    /**
+     * @Route("/plantilla", name="plantilla")
      */
     public function plantillaAction(Request $request)
     {
@@ -75,4 +85,40 @@ class EvaController extends Controller
           'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
       ));
     }
+
+
+    /**
+     * @Route("/student", name="estudiante")
+     */
+    public function studentAction(Request $request)
+    {
+      // replace this example code with whatever you need
+      return $this->render('eva/estudiante.html.twig', array(
+          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+      ));
+    }
+
+    /**
+     * @Route("/presentarExam", name="presentarExam")
+     */
+    public function presentarExamAction(Request $request)
+    {
+      // replace this example code with whatever you need
+      return $this->render('eva/presentarExam.html.twig', array(
+          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+      ));
+    }
+
+    /**
+     * @Route("/addStudent", name="addStudent")
+     */
+    public function addStudentAction(Request $request)
+    {
+      // replace this example code with whatever you need
+      return $this->render('eva/AñadirEstud.html.twig', array(
+          'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+      ));
+    }
+
+
 }

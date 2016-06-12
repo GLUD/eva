@@ -1,0 +1,141 @@
+{% extends 'evabase.html.twig' %}
+{% block title %}
+    Examenes Creados{% endblock %}
+{% block titulo %}
+    Cursos...
+    {#Añadir Nombre Curso#}
+{% endblock %}
+{% block afterBody %}
+    <div id="ins" title="Inscripción al Curso" style="display:none;">
+        {#style oculta el Modal#}
+        <p>Curso:
+            <br>
+            Horario:
+        </p>
+        {# Texto ventana#}
+    </div>
+{% endblock%}
+    {% block btn1href %}
+        /main
+    {% endblock %}
+    {% block btn1 %}
+        Salir
+    {% endblock %}
+    {% block btn2href %}{% endblock %}
+    {% block btn2 %}{% endblock %}
+
+    {% block LeftColumn %}
+        <div class="callout large">
+            <h5 style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 0; font-family: 'sans-serif'; font-size:20px;">
+                Primer Curso Inscrito</h5>
+            <p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="70">
+                                Docente
+                            </th>
+                            <th >Correo Electronico</th>
+                            <th >Opciones</th>
+                        </tr>
+                    </thead>
+
+                    {%if 'Flauta' starts with 'F'%}
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {% block teacher %}NombreDocente{% endblock %}
+                                </td>
+                                <td>
+                                    {% block score %}Correo@...{% endblock %}
+                                </td>
+                                <td>
+                                    <div class="button-group">
+                                        {# <a class="secondary button">Asignar Hora Examen</a>#}
+                                        <a href="/presentarExam" type="submit" class="success button">
+                                            Presentar Examen
+                                        </a>
+                                        <a class="alert button">Abandonar Curso</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {%endif%}
+                        </table>
+                    </p>
+                </div>
+
+            {% endblock %}
+
+            {% block field %}
+                <div class="callout large">
+                    <h5 style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 0; font-family: 'sans-serif'; font-size:20px;">
+                        Cursos Disponibles</h5>
+                    <p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="40">NombreCurso
+                                    </th>
+                                    <th>Docente</th>
+                                </tr>
+                            </thead>
+
+
+                                <tbody>
+                                {%if 'Book' starts with 'B'%}
+                                    <tr>
+                                        <td>
+                                            {% block curso %}
+                                            <div id="reg">
+                                                CursoUno
+                                            </div>
+                                            {% endblock %}
+                                        </td>
+                                        <td>
+                                            {% block t %}Docente
+                                            {% endblock %}
+                                        </td>
+                                    </tr>
+                                    {%endif%}
+                                </table>
+                            </p>
+                        </div>
+                        {% block javascripts %}
+
+                                <script src="{{ asset('js/jquery.js') }}" type="text/javascript"></script>
+                                <script src="{{ asset('js/jquery-ui.min.js') }}" type="text/javascript"></script>
+                                <script src="{{ asset('js/jquery-ui.js') }}" type="text/javascript"></script>
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#reg').button();
+                                        {
+                                            {# Formatea el boton#}
+                                        }
+
+                                        {# Formato de la ventana de dialogo#}
+                                        $('#ins').dialog({
+                                            autoOpen: open,
+                                            modal: true,
+                                            width: 350,
+                                            height: 250,
+
+                                            buttons: {
+                                                Inscribir: function() {
+                                                    {# Añadir acción de inscribir#}
+                                                    $(this).dialog("close");
+                                                },
+                                                Cerrar: function() {
+                                                    $(this).dialog("close");
+                                                }
+                                            }
+                                        });
+                                        $('#reg').click(function() {
+                                            {# Mjuestra el dialogo la hacer click#}
+                                            $('#ins').dialog('open');
+                                        });
+                                    });
+                                </script>
+
+                            {% endblock %}
+
+                        {% endblock %}
