@@ -1,15 +1,37 @@
-.fi-social-youtube {
-    color: red;
-    font-size: 2rem;
-}
-.fi-social-twitter {
-    color: skyblue;
-    font-size: 2rem;
-}
-.fi-social-facebook {
-    color: dodgerblue;
-    font-size: 2rem;
-}
+/* Estilos CSS para EVA*/
+
+/* Social Brands */
+.fi-social-youtube {color: red;font-size: 6rem;}
+.fi-social-twitter {color: skyblue;font-size: 6rem;}
+.fi-social-facebook {color: dodgerblue;font-size: 6rem;}
+.social {fill: #5771FF;stroke: #B7B7B7;stroke-width: 2;}
+.social1 {fill: #00A63E;stroke: #B7B7B7;stroke-width: 2;}
+.social2 {fill: #A65600;stroke: #B7B7B7;stroke-width: 2;}
+.social3 {fill: #FF8500;stroke: #B7B7B7;stroke-width: 2;}
+.social4 {fill: #BF4930;stroke: #B7B7B7;stroke-width: 2;}
+.social5 {fill: #BF9630;stroke: #B7B7B7;stroke-width: 2;}
+
+/*Brand Colors*/
+.brand {fill: #0ABBFF;stroke: #B7B7B7;stroke-width: 2;}
+.brand1 {fill: #3599BF;stroke: #B7B7B7;stroke-width: 2;}
+.brand2 {fill: #0379A6;stroke: #B7B7B7;stroke-width: 2;}
+
+/*Neutral Colors*/
+.neutral {fill: #000000;stroke: #B7B7B7;stroke-width: 2;}
+.neutral1 {fill: #191919;stroke: #B7B7B7;stroke-width: 2;}
+.neutral2 {fill: #333333;stroke: #B7B7B7;stroke-width: 2;}
+.neutral3 {fill: #808080;stroke: #B7B7B7;stroke-width: 2;}
+.neutral4 {fill: #B3B3B3;stroke: #B7B7B7;stroke-width: 2;}
+.neutral5 {fill: #E6E6E6;stroke: #B7B7B7;stroke-width: 2;}
+.neutral6 {fill: #F2F2F2;stroke: #B7B7B7;stroke-width: 2;}
+.neutral7 {fill: #FFFFFF;stroke: #B7B7B7;stroke-width: 2;}
+
+/*Transactions Colors*/
+.transa {fill: #FFB600;stroke: #B7B7B7;stroke-width: 2;}
+.transa1 {fill: #A67600;stroke: #B7B7B7;stroke-width: 2;}
+.transa2 {fill: #FF6140;stroke: #B7B7B7;stroke-width: 2;}
+.transa3 {fill: #FF8B73;stroke: #B7B7B7;stroke-width: 2;}
+
 body {
     margin-top: 2rem;
 }
