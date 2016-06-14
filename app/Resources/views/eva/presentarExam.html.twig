@@ -1,0 +1,71 @@
+{% extends 'evabase.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block titulo %}Examen:____________ {# nombreExamen #} Curso:_________ {# nombreCurso #}
+{% endblock %}
+
+{% block btn1href %}
+    /student
+{% endblock %}
+{% block btn1 %}
+    Salir Sin Guardar{% endblock %}
+{% block btn2href %}{% endblock %}
+{% block btn2 %}Guardar y Enviar Examen{% endblock %}
+
+{% block btnAdicional %}{% endblock %}
+{% block LeftColumn %}{% endblock %}
+
+{% block afterBody %}
+    <div id="dialogo" title="dialogo Normal" style="display:none;">{#style oculta el Modal#}
+    <p>Diálogo Emergente</p> {# Texto ventana#}
+    </div>
+    {% endblock%}
+
+{% block field %}
+<div id="dialogoSencillo">
+    DialogoSencillo
+</div>
+
+<div class="radar_post"><div class="radar_content"><div class="photo_post"><div style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 0; font-family: 'sans-serif'; font-size:20px;" class="thumbnail_anchor">Tiempo total:  <hr> Tiempo Restante: <br> Cantidad de Preguntas: <br> Teimpo promedio para cada pregunta:  <a class="radar_superglass" href=""></a> </div></div></div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dialogoSencillo').button();
+            {
+                {# Formatea el boton#}
+            }
+
+            {# Formato de la ventana de dialogo#}
+            $('#dialogo').dialog({
+                autoOpen: open,
+                modal: false,
+                width: 350,
+                height: 200,
+
+                buttons: {
+                Google: function() {
+                    window.location.href = "http://www.google.com";
+                },
+                jQueryUI: function() {
+                    window.location.href = "http://jqueryui.com";
+                },
+                    Cerrar: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            $('#dialogoSencillo').click(function(){
+            {# Mjuestra el dialogo la hacer click#}
+            $('#dialogo').dialog('open');
+            });
+        });
+    </script>
+
+{% endblock %}

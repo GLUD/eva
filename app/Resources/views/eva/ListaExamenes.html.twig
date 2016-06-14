@@ -1,0 +1,105 @@
+{% extends 'evabase.html.twig' %}
+
+{% block title %}
+    Examenes Creados{% endblock %}
+
+{% block titulo %}
+    Examenes Curso:
+    {#Añadir Nombre Curso#}
+{% endblock %}
+
+{% block btn1href %}
+    /docente
+{% endblock %}
+{% block btn1 %}
+    Salir
+{% endblock %}
+{% block btn2href %}{% endblock %}
+{% block btn2 %}{% endblock %}
+
+{% block LeftColumn %}
+    <div class="callout large">
+        <h5 style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 0; font-family: 'sans-serif'; font-size:20px;">
+            Previamente Creados</h5>
+        <p>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="70">
+                            Presentado por
+                        </th>
+                        <th>Fecha</th>
+                        <th >Calificación</th>
+                        <th >Opciones</th>
+                    </tr>
+                </thead>
+
+                {%if 'Flauta' starts with 'F'%}
+                    <tbody>
+                        <tr>
+                            <td>
+                                {% block nameStudent %}NombreEstudiante{% endblock %}
+                            </td>
+                            <td>
+                                {% block date %}Fecha
+                                {% endblock %}
+                            </td>
+                            <td>
+                                {% block score %}Calificación{% endblock %}
+                            </td>
+                            <td>
+                                <div class="button-group">
+                                    <a class="secondary button">Ver</a>
+                                    <a class="success button">Habilitar</a>
+                                    <a class="warning button">Editar</a>
+                                    <a class="alert button">Eliminar</a>
+                                </div>
+
+                            </td>
+                        </tr>
+                        {%endif%}
+
+                    </table>
+                </p>
+
+            </div>
+        {% endblock %}
+
+        {% block field %}
+            <h5 style="text-shadow: 4px 4px 6px rgba(100, 155, 255, 0.8); margin: 0; font-family: 'sans-serif'; font-size:20px;	">
+                Por Calificar</h5>
+<br>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="40">NombreExamen
+                        </th>
+                        <th>Estudiante</th>
+                        <th>Fecha</th>
+
+                    </tr>
+                </thead>
+
+                {%if 'Book' starts with 'B'%}
+                    <tbody>
+                        <tr>
+                            <td>
+                                {% block nameExam %}
+
+                                    <button class="hollow button" href="#">
+                                         ExamenUno </button>
+
+                                {% endblock %}
+                            </td>
+                            <td>
+                                {% block studentExam %}Nombre
+                                {% endblock %}
+                            </td>
+                            <td>
+                                {% block dateExam %}Fecha{% endblock %}
+                            </td>
+
+                        </tr>
+                        {%endif%}
+                    </table>
+                {% endblock %}

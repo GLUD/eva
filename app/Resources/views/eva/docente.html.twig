@@ -1,7 +1,7 @@
 {% extends 'evabase.html.twig' %}
 {% block title %}Docente{% endblock %}{#Titulo barra navegador#}
 {% block titulo %}{{parent()}}{% endblock %}{#Titulo interno página#}
-{% block field %}{{parent()}}{% endblock %}{#Primer Texto Columna Izq#}
+{% block field %}{% endblock %}{#Primer Texto Columna Izq#}
 {#  Adición de imagenes por campo en la plantilla #}
 {% block field1 %}
     <div class="media-object-section">
@@ -23,29 +23,26 @@
     Linux
 {% endblock %}
 {% block LeftColumn %}
+    Porfavor, seleccione alguna de las opciones presentadas en la parte superior.
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-    <header class="header">
-    {#    <h1 class="main-header">Do It Now!</h1>#}
-        <ul class="header-subnav">
-
-            <li>
-                <a href="#">Crear Examen</a>
-            </li>
-
-            <li>
-                <a href="#" class="is-active">Examenes Creados</a>
-            </li>
-
-            <li>
-                <a target="_blank" href="http://zurb.com/responsive">Añadir Estudiante</a>
-            </li>
-        </ul>
-    </header>
 {% endblock %}
 
-{% block subtitle %}
-    {{parent()}}
+{% block btn1href %}
+    /ListaExamenes
 {% endblock %}
+{% block btn1 %}Examenes Creados
+{% endblock %}
+
+{% block btn2href %}
+    /createExam
+{% endblock %}
+{% block btn2 %}
+    Crear Examen{% endblock %}
+
+{% block btn3href %}{% endblock %}
+{% block btn3 %}Añadir Estudiante
+{% endblock %}
+{% block subtitle %}{% endblock %}
 
 {% block stylesheets %}
     <style>
@@ -93,5 +90,6 @@
             color: #333;
             transition: all 0.25s ease-in-out;
         }
+
     </style>
 {% endblock %}
